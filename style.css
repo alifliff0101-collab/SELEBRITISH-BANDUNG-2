@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
+
+:root {
+  --pink: #ff2eae;
+  --lime: #b5ed3e;
+  --ink: #171717;
+  --paper: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  color: var(--ink);
+  font-family: 'DM Sans', Arial, sans-serif;
+}
+
+/* HEADER */
+.topbar {
+  width: 100%;
+  min-height: 58px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--pink);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #111;
+}
+
+.brand {
+  color: #111;
+  text-decoration: none;
+  font: 800 15px 'Space Grotesk', sans-serif;
+  letter-spacing: -.7px;
+}
+
+.brand span {
+  color: white;
+}
+
+.top-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  border: 1.5px solid #111;
+  background: var(--lime);
+  padding: 7px 10px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  background: #111;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.start-button {
+  display: none;
+}
+
+/* INTRO */
+.intro {
+  width: 100%;
+  text-align: center;
+  padding: 42px 18px 28px;
+  background: var(--pink);
+  border-top: 2px solid #111;
+  border-bottom: 2px solid #111;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0;
+  font: 700 clamp(28px, 7vw, 48px)/1 'Space Grotesk', sans-serif;
+  letter-spacing: -2px;
+}
+
+.hint {
+  margin: 12px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* HALAMAN */
+.pages {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 12px 54px;
+}
+
+.page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 30px;
+  padding: 0;
+}
+
+.page img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1.5px solid #111;
+  object-fit: contain;
+}
+
+.page figcaption {
+  padding: 9px 2px 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 25px 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: #111;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+footer p {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+footer a {
+  color: var(--lime);
+  text-decoration: none;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+  .topbar {
+    padding: 0 max(24px, calc((100% - 900px) / 2));
+  }
+
+  .hero {
+    max-height: 85vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero img {
+    width: auto;
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+  }
+
+  .pages {
+    padding: 28px 24px 54px;
+  }
+
+  .page {
+    margin-bottom: 44px;
+  }
+}
+
+/* HP */
+@media (max-width: 699px) {
+  .topbar {
+    padding: 0 14px;
+  }
+
+  .pages {
+    padding: 18px 10px 40px;
+  }
+
+  .page {
+    margin-bottom: 26px;
+  }
+
+  .intro {
+    padding: 32px 14px 24px;
+  }
+}
+
+/* FIX HALAMAN CHAT WHATSAPP */
+.book-page {
+  width: 100%;
+  max-width: 480px;
+  margin: 30px auto;
+  padding: 0;
+  display: block;
+}
+
+.book-page img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: none;
+}
+
+/* PASTIKAN HALAMAN BERADA DI TENGAH */
+.pages {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+}
+
+/* MENCEGAH SCROLL KE SAMPING */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 600px) {
+  .pages {
+    padding: 18px 10px 40px;
+  }
+
+  .book-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .book-page img {
+    width: 100%;
+    height: auto;
+  }
+}
